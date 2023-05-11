@@ -73,3 +73,65 @@ function done() {
 }
 
 learnJs('JavaScript', done)
+
+const obj = {
+    a: 5,
+    b: 1,
+};
+
+const copy = obj;// передает ссылку
+
+copy.a = 10;
+console.log(copy);
+console.log(obj)
+
+function objCopy(mainObj) {
+    let copyObj = {};
+    //let key;
+    for (key in mainObj) {
+        copyObj[key] = mainObj[key];
+    }
+    return copyObj
+}
+
+const numbers = {
+    a: 2,
+    b: 4,
+    c: {
+        x: 7,
+        y: 9,
+        z: 15,
+    }
+};
+
+const copyNumbers = objCopy(numbers);
+copyNumbers.a = 10;
+console.log(numbers);
+console.log(copyNumbers);
+
+const add = {
+    d: 18,
+    e: 19
+};
+
+const clone = Object.assign({}, add);
+clone.d = 21;
+console.log(add);
+console.log(clone)
+
+const oldArr = ['a', 'b', 'c'];
+const newArr = oldArr.slice();
+newArr[0] = 4;
+console.log(newArr)
+console.log(oldArr)
+
+const video = ['youtube', 'rutube', 'tiktok'],
+      blog = ['livejournal', 'wordpress', 'habr'],
+      internet = [...video, ...blog, 'facebook', 'vk'];
+
+console.log(internet.length)
+
+ 
+
+
+

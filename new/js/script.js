@@ -107,10 +107,15 @@ for (let key in options) {
 console.log(count)
 
 let arr = [1, 2, 3, 4, 5, 6, 7, 8]
-arr[99] = 0;
-arr
+//arr[99] = 0;
+//console.log(arr.length)
+//console.log(arr)
 //arr.pop()
 //arr.push('nine')
+arr.forEach(function(i, j, arr) {
+    console.log(`${j}: ${i} внутри массива ${arr}`);
+})
+
 for (let i = 0; i < arr.length; i++) {
     console.log(arr[i])
 }
