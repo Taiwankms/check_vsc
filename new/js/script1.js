@@ -22,7 +22,7 @@
 //console.log(sorted)
 
 // To string
-console.log(typeof(String(43)));
+/* console.log(typeof(String(43)));
 console.log(typeof(5 + 'dsf'));
 console.log(5 + 'dsf');
 const num = 5;
@@ -66,4 +66,13 @@ console.log(1 && 2 && 0 && null && undefined) // и запинается на л
                                               // или запинается на правде
 
 console.log(!!( 1 && 3 ) === (1 && 3))
-console.log(typeof(+'inf'));
+console.log(typeof(+'inf')); */
+
+
+const box = document.getElementById('box'),
+      btns = document.getElementsByTagName('button'),
+      circles = document.getElementsByClassName('circles'),
+      hearts = document.querySelectorAll('heart'),
+      oneHeart = document.querySelector('.heart');
+
+
