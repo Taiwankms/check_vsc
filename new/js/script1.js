@@ -71,8 +71,37 @@ console.log(typeof(+'inf')); */
 
 const box = document.getElementById('box'),
       btns = document.getElementsByTagName('button'),
-      circles = document.getElementsByClassName('circles'),
-      hearts = document.querySelectorAll('heart'),
-      oneHeart = document.querySelector('.heart');
+      circle = document.getElementsByClassName('circle'),
+      wrapper = document.querySelector('.wrapper'),
+      hearts = wrapper.querySelectorAll('.heart'),
+      oneHeart = wrapper.querySelector('.heart');
 
+box.style.cssText = 'background-color: green; width: 800px'
+btns[2].style.borderRadius = '100%';
+circle[0].style.backgroundColor = 'lime';
 
+//for (let i = 0; i < hearts.length; i++) {
+//    hearts[i].style.backgroundColor = 'greenYellow'
+//}
+
+hearts.forEach(item => {
+    item.style.backgroundColor = 'Aqua';
+})
+
+const div = document.createElement('div');
+//const text = document.createTextNode('Тут был Васька');
+//wrapper.appendChild(div);
+
+div.classList.add('black');
+//wrapper.prepend(div);
+wrapper.append(div);
+//hearts[2].before(div);
+hearts[0].after(div);
+//circle[0].remove();
+//hearts[0].replaceWith(circle[0]);
+
+div.innerHTML = '<h1>Hello world</h1>';
+
+//div.textContent = "Hi, mf";
+
+div.insertAdjacentHTML("afterend", '<h2>Hi, dude</h2>');
